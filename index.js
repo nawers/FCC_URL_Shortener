@@ -19,6 +19,11 @@ app.get('/api/hello', function(req, res) {
   res.json({ greeting: 'hello API' });
 });
 
+// where your node app starts
+var apiRoutes = require('./myApp');
+app.use(apiRoutes);
+
+
 app.listen(port, function() {
   console.log(`Listening on port ${port}`);
 });
