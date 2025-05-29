@@ -36,7 +36,7 @@ app.post('/api/shorturl', (req, res) => {
       return res.json({ error: 'invalid url' });
     }
 
-    const shortUrl = generateUniqueShortUrl();
+    const shortUrl = generateRandomUrl();
     urlDatabase[shortUrl] = originalUrl;
 
     res.json({
